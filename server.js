@@ -12,6 +12,7 @@ const app = express();
 
 const allowedOrigins = [
     "http://localhost:5173",
+    "https://login-fe-sand.vercel.app",
     process.env.CLIENT_URL
 ];
 

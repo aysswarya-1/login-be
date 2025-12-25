@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json())
 app.use(cors({
-    origin: "https://login-6w0j.onrender.com",
+    origin: "https://login-be-h3ti.onrender.com",
     credentials: true,
 }))
 

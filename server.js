@@ -10,10 +10,17 @@ dotenv.config();
 const PORT = process.env.PORT || 8000;
 const app = express();
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    process.env.CLIENT_URL
+];
+
 app.use(express.json())
 app.use(cors({
-    origin: "https://login-be-h3ti.onrender.com",
+    origin: allowedOrigins,
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
 }))
 
 app.use(cookieParser())
